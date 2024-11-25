@@ -1,21 +1,19 @@
-import logo from './logo.svg';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
-import Home from '../src/pages/home'
-import Second from '../src/pages/Second'
-import Third from '../src/pages/Third'
-
+import Home from './pages/HomePage';
+import Login from './pages/login';
+import Sign from './pages/SignUp';
 
 
 function App() {
   return (
-    <>
-    <Home/>
-    <Second/>
-    <Third/>
-
-    
-    </>
-
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/SignUp" element={<Sign />} />
+      </Routes>
+    </Router>
   );
 }
 

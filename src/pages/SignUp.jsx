@@ -39,6 +39,22 @@ const SignUp = () => {
           <h2 className="text-2xl font-semibold text-blue-900 mb-6">Sign Up!</h2>
 
           <form className="space-y-4">
+
+              {/* Role Field */}
+              <div>
+                <label className="block text-sm font-medium text-blue-900">Role:</label>
+                <select
+                  className="w-full mt-1 p-2 border border-gray-300 rounded-lg"
+                  defaultValue=""
+                >
+                  <option value="" disabled>
+                    Select your role
+                  </option>
+                  <option value="agent">Administrator</option>
+                  <option value="buyer">Admin</option>
+                  <option value="seller">Student</option>
+                </select>
+              </div>
             {/* Name */}
             <div>
               <label className="block text-sm font-medium text-blue-900">
@@ -99,17 +115,7 @@ const SignUp = () => {
               </div>
             </div>
 
-            {/* Additional Field */}
-            <div>
-              <label className="block text-sm font-medium text-blue-900">
-                Who are you?
-              </label>
-              <input
-                type="text"
-                placeholder="Who are you?"
-                className="w-full mt-1 px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-              />
-            </div>
+
 
             {/* Submit Button */}
             <button

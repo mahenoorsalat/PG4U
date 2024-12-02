@@ -41,6 +41,23 @@ const LoginForm = () => {
           <h2 className="text-2xl font-semibold text-blue-900 mb-6">Login!</h2>
           
           <div className="space-y-4">
+
+                       {/* Role Field */}
+<div>
+  <label className="block text-sm font-medium text-blue-900">Role:</label>
+  <select 
+    className="w-full mt-1 p-2 border border-gray-300 rounded-lg"
+    defaultValue=""
+  >
+    <option value="" disabled>
+      Select your role
+    </option>
+    <option value="agent">Administrator</option>
+    <option value="buyer">Admin</option>
+    <option value="seller">Student</option>
+  </select>
+</div>
+
             {/* Email Field */}
             <div>
               <label className="block text-sm font-medium text-blue-900">Email:</label>
@@ -69,14 +86,7 @@ const LoginForm = () => {
               </div>
             </div>
             
-            {/* Role Field */}
-            <div>
-              <label className="block text-sm font-medium text-blue-900">Role:</label>
-              <input 
-                placeholder="Who are you?"
-                className="w-full mt-1 p-2 border border-gray-300 rounded-lg"
-              />
-            </div>
+
             
             {/* Login Button */}
             <button 
